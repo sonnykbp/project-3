@@ -1,11 +1,7 @@
 "use strict";
 
 (function(){
-  console.log("HI DOESN THIS WORK");
 
-  let owner = {name: "Sonny", phone: "703-098-1443", email: "sonny@google.com"}
-
-  console.log(owner);
   angular
   .module("petsitter", [
     "ui.router",
@@ -20,9 +16,18 @@
     "PetSitterFactory",
     PetSittersControllerFunction
   ])
+  .controller("PetSittersOwnersController", [
+    "$stateParams",
+    "PetSitterOwnerFactory",
+    PetSittersOwnersControllerFunction
+  ])
   .factory("PetSitterFactory", [
     "$resource",
     FactoryFunction
+  ])
+  .factory("PetSitterOwnerFactory", [
+    "$resource",
+    FactoryOwnerFunction
   ])
 
   function RouterFunction($stateProvider) {
@@ -33,23 +38,36 @@
       controller: "PetSittersController",
       controllerAs: "vm"
     })
-    .state("PetSitterIndex", {
+    .state("PetSitterOwnerIndex", {
       url: "/owners",
       templateUrl: "js/ng-views/owners/index.html",
       controller: "PetSittersController",
       controllerAs: "vm"
     })
+    .state("PetSitterIndex", {
+      url: "/sitters",
+      templateUrl: "js/ng-views/sitters/index.html",
+      controller: "PetSittersOwnersController",
+      controllerAs: "vm"
+    })
   }
 
   function FactoryFunction($resource) {
-    console.log("factory function");
-    return $resource("http://localhost:3000/owners/:id");
+    return $resource("http://localhost:3000/sitters/:id");
+
+  }
+
+  function FactoryOwnerFunction($resource) {
+    return $resource("http://localhost:3000/pets/all_pets");
 
   }
 
   function PetSittersControllerFunction($stateParams, PetSitterFactory) {
-    this.owners = PetSitterFactory.query()
-    console.log("WORKS");
+    this.sitters = PetSitterFactory.query()
+  }
+
+  function PetSittersOwnersControllerFunction($stateParams, PetSitterOwnerFactory) {
+    this.owners = PetSitterOwnerFactory.query()
   }
 
 

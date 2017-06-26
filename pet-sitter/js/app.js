@@ -15,16 +15,16 @@
     "PetSitterFactory",
     PetSittersControllerFunction
   ])
-  .controller("PetSittersShowController", [
+  .controller("ShowController", [
     "$stateParams",
     "PetSitterFactory",
     PetSittersShowControllerFunction
   ])
-  .controller("PetSittersOwnersController", [
+  .controller("OwnersController", [
     "PetSitterOwnerFactory",
     PetSittersOwnersControllerFunction
   ])
-  .controller("PetSittersOwnersShowController", [
+  .controller("OwnersShowController", [
     "$stateParams",
     "PetSitterOwnerShowFactory",
     PetSittersOwnersShowControllerFunction
@@ -53,13 +53,13 @@
     .state("PetSitterOwnerIndex", {
       url: "/owners",
       templateUrl: "js/ng-views/owners/index.html",
-      controller: "PetSittersOwnersController",
+      controller: "OwnersController",
       controllerAs: "vm"
     })
     .state("PetSitterOwnerShow", {
       url: "/owners/:id",
       templateUrl: "js/ng-views/owners/show.html",
-      controller: "PetSittersOwnersShowController",
+      controller: "OwnersShowController",
       controllerAs: "vm"
     })
     .state("PetSitterIndex", {
@@ -71,7 +71,7 @@
     .state("PetSitterShow", {
       url: "/sitters/:id",
       templateUrl: "js/ng-views/sitters/show.html",
-      controller: "PetSittersShowController",
+      controller: "ShowController",
       controllerAs: "vm"
     })
   }

@@ -33,7 +33,7 @@
   function RouterFunction($stateProvider) {
     $stateProvider
     .state("PetSitterHome", {
-      url: "",
+      url: "/",
       templateUrl: "js/ng-views/home.html",
       controller: "PetSittersController",
       controllerAs: "vm"

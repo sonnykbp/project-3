@@ -7,7 +7,7 @@
 
   console.log(owner);
   angular
-  .module("petsitter", [
+  .module("petSitter", [
     "ui.router",
     "ngResource"
   ])

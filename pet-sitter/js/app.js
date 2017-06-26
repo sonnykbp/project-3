@@ -1,9 +1,11 @@
 "use strict";
 
 (function(){
+  console.log("HI DOESN THIS WORK");
 
   let owner = {name: "Sonny", phone: "703-098-1443", email: "sonny@google.com"}
 
+  console.log(owner);
   angular
   .module("petSitter", [
     "ui.router",
@@ -45,9 +47,9 @@
 
   }
 
-  function PetSittersControllerFunction() {
-    this.owners = owner;
-    console.log("in the function");
+  function PetSittersControllerFunction($stateParams, PetSitterFactory) {
+    this.owners = PetSitterFactory.query()
+    console.log("WORKS");
   }
 
 

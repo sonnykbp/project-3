@@ -1,0 +1,22 @@
+<h2>All pets</h2>
+
+<!-- <input type="text" data-ng-model="vm.byPetType"> -->
+<input type="text" data-ng-model="vm.byZipcode">
+<select data-ng-model="vm.byPetType">
+  <option value="">Dog</option>
+  <option value="">Cat</option>
+  <option value="">Reptile</option>
+  <option value="">Bird</option>
+</select>
+
+<div data-ng-repeat="owner in vm.owners | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode}">
+  <ul>
+    <li>{{owner.name}}</li>
+    <li>{{owner.pet_type}}</li>
+    <li>{{owner.zipcode}}</li>
+    <li>{{owner.medical_needs}}</li>
+    <li>{{owner.start_date}}</li>
+    <li>{{owner.end_date}}</li>
+  </ul>
+  <img src="{{owner.photo_url}}"/>
+</div>

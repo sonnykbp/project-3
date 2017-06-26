@@ -1,8 +1,12 @@
-<div data-ng-repeat="owner in vm.owners">
+<h2>All sitters</h2>
+<div data-ng-repeat="sitter in vm.sitters">
   <ul>
-    <li>{{owner.name}}</li>
-    <li>{{owner.phone}}</li>
-    <li>{{owner.email}}</li>
+    <li>{{sitter.name}}</li>
+    <li>{{sitter.phone}}</li>
+    <li>{{sitter.email}}</li>
+    <li>{{sitter.pet_type}}</li>
+    <li>{{sitter.service}}</li>
+    <li>{{sitter.price}}</li>
   </ul>
-  <img src="{{owner.photo_url}}"/>
+  <img src="{{sitter.photo_url}}"/>
 </div>

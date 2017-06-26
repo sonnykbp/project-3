@@ -15,4 +15,11 @@ class PetsController < ApplicationController
 
   end
 
+  def all_pets
+    @pets = Pet.all
+
+    render json: @pets
+
+  end
+
 end

@@ -12,14 +12,22 @@
     RouterFunction
   ])
   .controller("PetSittersController", [
-    "$stateParams",
     "PetSitterFactory",
     PetSittersControllerFunction
   ])
-  .controller("PetSittersOwnersController", [
+  .controller("PetSittersShowController", [
     "$stateParams",
+    "PetSitterFactory",
+    PetSittersShowControllerFunction
+  ])
+  .controller("PetSittersOwnersController", [
     "PetSitterOwnerFactory",
     PetSittersOwnersControllerFunction
+  ])
+  .controller("PetSittersOwnersShowController", [
+    "$stateParams",
+    "PetSitterOwnerShowFactory",
+    PetSittersOwnersShowControllerFunction
   ])
   .factory("PetSitterFactory", [
     "$resource",
@@ -28,6 +36,10 @@
   .factory("PetSitterOwnerFactory", [
     "$resource",
     FactoryOwnerFunction
+  ])
+  .factory("PetSitterOwnerShowFactory", [
+    "$resource",
+    FactoryOwnerShowFunction
   ])
 
   function RouterFunction($stateProvider) {
@@ -41,33 +53,56 @@
     .state("PetSitterOwnerIndex", {
       url: "/owners",
       templateUrl: "js/ng-views/owners/index.html",
-      controller: "PetSittersController",
+      controller: "PetSittersOwnersController",
+      controllerAs: "vm"
+    })
+    .state("PetSitterOwnerShow", {
+      url: "/owners/:id",
+      templateUrl: "js/ng-views/owners/show.html",
+      controller: "PetSittersOwnersShowController",
       controllerAs: "vm"
     })
     .state("PetSitterIndex", {
       url: "/sitters",
       templateUrl: "js/ng-views/sitters/index.html",
-      controller: "PetSittersOwnersController",
+      controller: "PetSittersController",
+      controllerAs: "vm"
+    })
+    .state("PetSitterShow", {
+      url: "/sitters/:id",
+      templateUrl: "js/ng-views/sitters/show.html",
+      controller: "PetSittersShowController",
       controllerAs: "vm"
     })
   }
 
   function FactoryFunction($resource) {
     return $resource("http://localhost:3000/sitters/:id");
-
   }
 
   function FactoryOwnerFunction($resource) {
     return $resource("http://localhost:3000/pets/all_pets");
-
   }
 
-  function PetSittersControllerFunction($stateParams, PetSitterFactory) {
+  function FactoryOwnerShowFunction($resource) {
+    return $resource("http://localhost:3000/owners/:id");
+  }
+
+  function PetSittersControllerFunction(PetSitterFactory) {
     this.sitters = PetSitterFactory.query()
+
   }
 
-  function PetSittersOwnersControllerFunction($stateParams, PetSitterOwnerFactory) {
-    this.owners = PetSitterOwnerFactory.query()
+  function PetSittersShowControllerFunction($stateParams, PetSitterFactory) {
+    this.sitter = PetSitterFactory.get({id: $stateParams.id})
+  }
+
+  function PetSittersOwnersControllerFunction(PetSitterOwnerFactory) {
+    this.pets = PetSitterOwnerFactory.query()
+  }
+
+  function PetSittersOwnersShowControllerFunction($stateParams, PetSitterOwnerShowFactory) {
+    this.owner = PetSitterOwnerShowFactory.get({id: $stateParams.id})
   }
 
 

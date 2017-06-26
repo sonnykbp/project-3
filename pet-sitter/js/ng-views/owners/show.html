@@ -1,0 +1,8 @@
+<h1>Owner's Profile</h1>
+<p>{{vm.owner.name}}</p>
+<p>{{vm.owner.phone}}</p>
+<p>{{vm.owner.email}}</p>
+<h1>Pet's Profile</h1>
+<div data-ng-repeat="pet in vm.owner.pets">
+  <p>{{pet.name}}</p>
+</div>

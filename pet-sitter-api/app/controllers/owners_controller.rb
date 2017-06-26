@@ -8,6 +8,6 @@ class OwnersController < ApplicationController
   def show
     @owner = Owner.find(params[:id])
 
-    render json: @owner
+    render json: @owner.to_json(include: :pets)
   end
 end

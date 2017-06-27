@@ -77,24 +77,29 @@ h1 {
 }*/
 .filter_box {
   text-align: center;
+  margin-bottom: 40px;
 }
 .sitters_header {
   background: url('http://i68.tinypic.com/2eek09d.jpg') no-repeat center center;
-  /*height: 330px;*/
+  margin: 0;
+  padding: 0;
+}
+
+.owners_header {
+  background: url('https://newevolutiondesigns.com/images/freebies/cat-wallpaper-47.jpg') no-repeat center center;
   margin: 0;
   padding: 0;
 }
 
 .sitters_wrapper {
- margin-bottom: 40px;
+ margin: 10px;
 
 }
 .profile_wrapper {
  display: flex;
- justify-content: space-around;
+ justify-content: center;
  flex-wrap: wrap;
- margin-top: 40px;
- padding: 0;
+ align-content: space-around;
 
 }
 

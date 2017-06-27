@@ -5,7 +5,8 @@
   angular
   .module("petSitter", [
     "ui.router",
-    "ngResource"
+    "ngResource",
+    "angular.filter"
   ])
   .config([
     "$stateProvider",

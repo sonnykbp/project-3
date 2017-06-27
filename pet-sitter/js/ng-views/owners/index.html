@@ -1,4 +1,6 @@
 <h2>All pets</h2>
+Click here to search all dogs:
+<input type="checkbox" ng-model="mySel">
 
 <input type="text" data-ng-model="vm.byPetType">
 <input type="text" data-ng-model="vm.byZipcode">
@@ -11,10 +13,10 @@
 </select> -->
 
 <select ng-model="vm.byPetType">
-         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | limitTo: {}" ng-value="vm.pet_type">{{pet.pet_type}}</option>
+         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
 </select>
 <select ng-model="vm.byZipcode">
-         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets" ng-value="vm.zipcode">{{pet.zipcode}}</option>
+         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
 </select>
 
 <!-- <select data-ng-model="vm.thepets" ng-options="x.pet_type for x in vm.pets | filter: {name: vm.thepets}">

@@ -1,22 +1,22 @@
 
-  <div class="sitters_header" style="margin-bottom: 50px;">
-    <div class="overlay">
-      <h2 style="margin: 0; padding-top: 100px; padding-bottom: 100px; color: white; text-align: center;">Find Pet Sitters</h2>
-    </div>
+<div class="sitters_header" style="margin-bottom: 50px;">
+  <div class="overlay">
+    <h2 style="margin: 0; padding-top: 100px; padding-bottom: 100px; color: white; text-align: center;">Find Pet Sitters</h2>
   </div>
-
-  <div class="site_wrapper">
-  <div class="filter_box">
-  <input type="text" placeholder="Name" data-ng-model="vm.byName">
-  <input type="text" placeholder="Zipcode" data-ng-model="vm.byZipcode">
-
-  <select ng-model="vm.byName">
-    <option ng-selected="vm.byName" ng-repeat="sitter in vm.sitters | unique: 'name'" ng-value="vm.name">{{sitter.name}}</option>
-  </select>
-  <select ng-model="vm.byZipcode">
-    <option ng-selected="vm.byZipcode" ng-repeat="sitter in vm.sitters | unique: 'zipcode'" ng-value="vm.zipcode">{{sitter.zipcode}}</option>
-  </select>
 </div>
+
+<div class="site_wrapper">
+  <div class="filter_box">
+    <input type="text" placeholder="Name" data-ng-model="vm.byName">
+    <input type="text" placeholder="Zipcode" data-ng-model="vm.byZipcode">
+
+    <select ng-model="vm.byName">
+      <option ng-selected="vm.byName" ng-repeat="sitter in vm.sitters | unique: 'name'" ng-value="vm.name">{{sitter.name}}</option>
+    </select>
+    <select ng-model="vm.byZipcode">
+      <option ng-selected="vm.byZipcode" ng-repeat="sitter in vm.sitters | unique: 'zipcode'" ng-value="vm.zipcode">{{sitter.zipcode}}</option>
+    </select>
+  </div>
 
 
   <div class="profile_wrapper">

@@ -1,23 +1,30 @@
-<h2>All pets</h2>
+<div class="owners_header" style="margin-bottom: 50px;">
+  <div class="overlay">
+    <h2 style="margin: 0; padding-top: 100px; padding-bottom: 100px; color: white; text-align: center;">Find Pet Sitting Opportunities</h2>
+  </div>
+</div>
 
-<input type="text" data-ng-model="vm.byPetType">
-<select ng-model="vm.byPetType">
-         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
-</select>
+<div class="site_wrapper">
+  <div class="filter_box">
+    <input type="text" data-ng-model="vm.byPetType">
+    <select ng-model="vm.byPetType">
+      <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
+    </select>
 
 
 
 
 
-<input type="text" data-ng-model="vm.byZipcode">
-<select ng-model="vm.byZipcode">
-         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
-</select>
+    <input type="text" data-ng-model="vm.byZipcode">
+    <select ng-model="vm.byZipcode">
+      <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
+    </select>
 
-<p>If you are not okay delivering pet medications, select box.</p>
-<input type="checkbox" data-ng-model="vm.byMedication">
+    <p>If you are not okay delivering pet medications, select box.</p>
+    <input type="checkbox" data-ng-model="vm.byMedication">
+  </div>
 
-<!-- <select data-ng-model="vm.byPetType">
+  <!-- <select data-ng-model="vm.byPetType">
   <option value="">Dog</option>
   <option value="">Cat</option>
   <option value="">Reptile</option>
@@ -31,14 +38,20 @@
 <h1>You selected: {{vm.thepets.pet_type}}</h1>
 <p>Its name is: {{vm.thepets.name}}</p> -->
 
+<div class="profile_wrapper">
+  <div class="sitters_wrapper" data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType} | filter: {medical_needs: vm.byMedication}">
+    <div class="img-thumbnail hover description">
+      <a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})"><img class="resize" src="{{pet.photo_url}}"/></a>
+      <ul>
+        <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
+        <li>{{pet.pet_type}}</li>
+        <li>{{pet.zipcode}}</li>
+        <li>{{pet.start_date}}</li>
+        <li>{{pet.end_date}}</li>
+      </ul>
 
-<div data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType} | filter: {medical_needs: vm.byMedication}">
-  <ul>
-    <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
-    <li>{{pet.pet_type}}</li>
-    <li>{{pet.zipcode}}</li>
-    <li>{{pet.start_date}}</li>
-    <li>{{pet.end_date}}</li>
-  </ul>
-  <img src="{{pet.photo_url}}"/>
+    </div>
+  </div>
+</div>
+
 </div>

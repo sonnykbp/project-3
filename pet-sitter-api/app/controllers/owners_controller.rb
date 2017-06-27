@@ -10,4 +10,5 @@ class OwnersController < ApplicationController
 
     render json: @owner.to_json(include: :pets)
   end
+  
 end

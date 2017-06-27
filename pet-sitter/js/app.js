@@ -15,16 +15,20 @@
     "PetSitterFactory",
     PetSittersControllerFunction
   ])
-  .controller("PetSittersShowController", [
+  .controller("ShowController", [
     "$stateParams",
     "PetSitterFactory",
     PetSittersShowControllerFunction
   ])
-  .controller("PetSittersOwnersController", [
+  .controller("PetNewController", [
+  "PetSitterOwnerShowFactory",
+  PetNewControllerFunction
+  ])
+  .controller("OwnersController", [
     "PetSitterOwnerFactory",
     PetSittersOwnersControllerFunction
   ])
-  .controller("PetSittersOwnersShowController", [
+  .controller("OwnersShowController", [
     "$stateParams",
     "PetSitterOwnerShowFactory",
     PetSittersOwnersShowControllerFunction
@@ -53,13 +57,19 @@
     .state("PetSitterOwnerIndex", {
       url: "/owners",
       templateUrl: "js/ng-views/owners/index.html",
-      controller: "PetSittersOwnersController",
+      controller: "OwnersController",
+      controllerAs: "vm"
+    })
+    .state("petNew", {
+      url: "/owners/:id/pets/new",
+      templateUrl: "js/ng-views/pets/new.html",
+      controller: "PetNewController",
       controllerAs: "vm"
     })
     .state("PetSitterOwnerShow", {
       url: "/owners/:id",
       templateUrl: "js/ng-views/owners/show.html",
-      controller: "PetSittersOwnersShowController",
+      controller: "OwnersShowController",
       controllerAs: "vm"
     })
     .state("PetSitterIndex", {
@@ -71,7 +81,7 @@
     .state("PetSitterShow", {
       url: "/sitters/:id",
       templateUrl: "js/ng-views/sitters/show.html",
-      controller: "PetSittersShowController",
+      controller: "ShowController",
       controllerAs: "vm"
     })
   }
@@ -95,6 +105,13 @@
 
   function PetSittersShowControllerFunction($stateParams, PetSitterFactory) {
     this.sitter = PetSitterFactory.get({id: $stateParams.id})
+  }
+
+  function PetNewControllerFunction(PetSitterOwnerShowFactory){
+    this.pet = new PetSitterOwnerShowFactory();
+    this.create = function(){
+      this.pet.$save()
+    }
   }
 
   function PetSittersOwnersControllerFunction(PetSitterOwnerFactory) {

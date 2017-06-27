@@ -20,6 +20,10 @@
     "PetSitterFactory",
     PetSittersShowControllerFunction
   ])
+  .controller("PetNewController", [
+  "PetSitterOwnerShowFactory",
+  PetNewControllerFunction
+  ])
   .controller("OwnersController", [
     "PetSitterOwnerFactory",
     PetSittersOwnersControllerFunction
@@ -54,6 +58,12 @@
       url: "/owners",
       templateUrl: "js/ng-views/owners/index.html",
       controller: "OwnersController",
+      controllerAs: "vm"
+    })
+    .state("petNew", {
+      url: "/owners/:id/pets/new",
+      templateUrl: "js/ng-views/pets/new.html",
+      controller: "PetNewController",
       controllerAs: "vm"
     })
     .state("PetSitterOwnerShow", {
@@ -95,6 +105,13 @@
 
   function PetSittersShowControllerFunction($stateParams, PetSitterFactory) {
     this.sitter = PetSitterFactory.get({id: $stateParams.id})
+  }
+
+  function PetNewControllerFunction(PetSitterOwnerShowFactory){
+    this.pet = new PetSitterOwnerShowFactory();
+    this.create = function(){
+      this.pet.$save()
+    }
   }
 
   function PetSittersOwnersControllerFunction(PetSitterOwnerFactory) {

@@ -125,7 +125,7 @@ flint = Owner.create(name: "Flint Carde",
 
 nancy = Sitter.create(name: "Nancy Price", photo_url: "https://pbs.twimg.com/profile_images/467092443/fp_1713383_jennifer_aniston_shares_a_smile_with_the_photographers.0.0.0x0.400x633.jpeg", phone: "1223", email: "nancy@goote.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, pet_type: ['dog', 'cat', 'reptiles', 'birds'], price: 50, service: ['boarding', 'drop-in']);
 
-roy = Sitter.create(name: "Roy Rogers", photo_url: "", phone: "8339920", email: "roy@rogers.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22180, pet_type: ['dog', 'cat'], service: ['drop-in', 'house sitting'], price: 80)
+roy = Sitter.create(name: "Roy Rogers", photo_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MjYwNTE2M15BMl5BanBnXkFtZTYwNTI0NjI1._V1_UX214_CR0,0,214,317_AL_.jpg", phone: "8339920", email: "roy@rogers.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22180, pet_type: ['dog', 'cat'], service: ['drop-in', 'house sitting'], price: 80)
 
 alberta = Sitter.create(name: "Alberta Meece",
   photo_url: "https://images.pexels.com/photos/157661/young-woman-shooting-model-157661.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -370,7 +370,7 @@ alberta = Sitter.create(name: "Alberta Meece",
   price: 75)
 
 
-benley = Pet.create(name: "Benley", photo_url: "https://s-media-cache-ak0.pinimg.com/736x/e6/6d/db/e66ddbe6925551552200514fe8d114bc.jpg", pet_type: "dog", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, medical_needs: true, owner: bob);
+benley = Pet.create(name: "Benley", photo_url: "https://s-media-cache-ak0.pinimg.com/736x/e6/6d/db/e66ddbe6925551552200514fe8d114bc.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, medical_needs: true, owner: bob);
 
 flash = Pet.create(name: "Flash", photo_url: "https://www.aspca.org/sites/default/files/cat-care_cat-nutrition-tips_overweight_body4_left.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 20009, medical_needs: false, owner: bob)
 
@@ -431,7 +431,7 @@ socks = Pet.create(name: "Socks",
     owner: kathryn)
 
   remy = Pet.create(name: "Remy",
-    photo_url:"",
+    photo_url:"https://s-media-cache-ak0.pinimg.com/736x/90/5e/32/905e325c258e35a4aac03c36b132ea85.jpg",
     pet_type: "reptile",
     start_date: "2017-8-1 9:00",
     end_date: "2017-8-4 12:00",

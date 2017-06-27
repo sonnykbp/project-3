@@ -2,6 +2,12 @@ body {
   padding-top: 50px;
   font-family: 'Raleway', sans-serif;
 }
+img.logo-img {
+  width: 50%;
+}
+.site_wrapper {
+  margin: 20px;
+}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -49,10 +55,10 @@ a.navbar-brand {
   font-weight: bold;
 }
 
-img {
+img.resize {
   object-fit: cover;
-  width:280px;
-  height:280px;
+  width: 300px;
+  height: 250px;
 }
 
 .hover:hover {
@@ -69,7 +75,9 @@ h1 {
   border-radius: 50%;
   width: 50%;
 }*/
-
+.filter_box {
+  text-align: center;
+}
 .sitters_header {
   background: url('http://i68.tinypic.com/2eek09d.jpg') no-repeat center center;
   /*height: 330px;*/
@@ -78,19 +86,18 @@ h1 {
 }
 
 .sitters_wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+ margin-bottom: 40px;
 
 }
 .profile_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ margin-top: 40px;
+ padding: 0;
+
 }
-.description {
-  border: 1px solid grey;
-}
+
 .btn-default {
   color: green;
   border-color: white;

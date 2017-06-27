@@ -1,9 +1,17 @@
 <h2>All pets</h2>
-Click here to search all dogs:
-<input type="checkbox" ng-model="mySel">
 
 <input type="text" data-ng-model="vm.byPetType">
+<select ng-model="vm.byPetType">
+         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
+</select>
+
 <input type="text" data-ng-model="vm.byZipcode">
+<select ng-model="vm.byZipcode">
+         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
+</select>
+
+<p>If you are not okay delivering pet medications, select box.</p>
+<input type="checkbox" data-ng-model="vm.byMedication">
 
 <!-- <select data-ng-model="vm.byPetType">
   <option value="">Dog</option>
@@ -12,12 +20,6 @@ Click here to search all dogs:
   <option value="">Bird</option>
 </select> -->
 
-<select ng-model="vm.byPetType">
-         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
-</select>
-<select ng-model="vm.byZipcode">
-         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
-</select>
 
 <!-- <select data-ng-model="vm.thepets" ng-options="x.pet_type for x in vm.pets | filter: {name: vm.thepets}">
 </select>
@@ -26,12 +28,11 @@ Click here to search all dogs:
 <p>Its name is: {{vm.thepets.name}}</p> -->
 
 
-<div data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType}">
+<div data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType} | filter: {medical_needs: vm.byMedication}">
   <ul>
     <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
     <li>{{pet.pet_type}}</li>
     <li>{{pet.zipcode}}</li>
-    <li>{{pet.medical_needs}}</li>
     <li>{{pet.start_date}}</li>
     <li>{{pet.end_date}}</li>
   </ul>

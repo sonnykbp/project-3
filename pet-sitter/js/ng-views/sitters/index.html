@@ -1,8 +1,16 @@
-<!-- <div style="background-image: url('https://cdn.allwallpaper.in/wallpapers/1152x864/12102/animals-bicycles-cats-motorbikes-pets-1152x864-wallpaper.jpg'); background-size: cover;">
-</div> -->
 <h2>All sitters</h2>
 
-<div data-ng-repeat="sitter in vm.sitters">
+<input type="text" placeholder="Name" data-ng-model="vm.byName">
+<input type="text" placeholder="Zipcode" data-ng-model="vm.byZipcode">
+
+<select ng-model="vm.byName">
+         <option ng-selected="vm.byName" ng-repeat="sitter in vm.sitters | unique: 'name'" ng-value="vm.name">{{sitter.name}}</option>
+</select>
+<select ng-model="vm.byZipcode">
+         <option ng-selected="vm.byZipcode" ng-repeat="sitter in vm.sitters | unique: 'zipcode'" ng-value="vm.zipcode">{{sitter.zipcode}}</option>
+</select>
+
+<div data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode}">
   <ul>
     <li><a data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></li>
     <li>{{sitter.phone}}</li>

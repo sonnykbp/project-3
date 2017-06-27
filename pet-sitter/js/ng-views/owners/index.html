@@ -5,6 +5,10 @@
          <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
 </select>
 
+
+
+
+
 <input type="text" data-ng-model="vm.byZipcode">
 <select ng-model="vm.byZipcode">
          <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>

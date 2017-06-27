@@ -21,7 +21,9 @@
     PetSittersShowControllerFunction
   ])
   .controller("PetNewController", [
-  "PetSitterOwnerShowFactory",
+  "$state",
+  "CreatePetFactory",
+  "$stateParams",
   PetNewControllerFunction
   ])
   .controller("OwnersController", [
@@ -44,6 +46,10 @@
   .factory("PetSitterOwnerShowFactory", [
     "$resource",
     FactoryOwnerShowFunction
+  ])
+  .factory("CreatePetFactory", [
+    "$resource",
+    FactoryCreatePetFunc
   ])
 
   function RouterFunction($stateProvider) {
@@ -98,6 +104,10 @@
     return $resource("http://localhost:3000/owners/:id");
   }
 
+  function FactoryCreatePetFunc($resource) {
+    return $resource("http://localhost:3000/owners/:owner_id/pets");
+  }
+
   function PetSittersControllerFunction(PetSitterFactory) {
     this.sitters = PetSitterFactory.query()
 
@@ -107,10 +117,10 @@
     this.sitter = PetSitterFactory.get({id: $stateParams.id})
   }
 
-  function PetNewControllerFunction(PetSitterOwnerShowFactory){
-    this.pet = new PetSitterOwnerShowFactory();
+  function PetNewControllerFunction($state, CreatePetFactory, $stateParams){
+    this.pet = new CreatePetFactory();
     this.create = function(){
-      this.pet.$save()
+      this.pet.$save({owner_id: $stateParams.id})
     }
   }
 

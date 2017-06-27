@@ -4,7 +4,7 @@
 <p>{{vm.owner.email}}</p>
 
 <h1>Pet's Profile</h1>
-<p><a data-ui-sref="petNew({id: vm.pet.owner_id})">Add Pet</a></p>
 <div data-ng-repeat="pet in vm.owner.pets">
   <p>{{pet.name}}</p>
+  <p><a data-ui-sref="petNew({id: pet.owner_id})">Add Pet</a></p>
 </div>

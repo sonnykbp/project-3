@@ -651,5 +651,5 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-29 10:00",
     end_date: "2017-7-3 12:30",
-    zipcode: 20011, medical_needs: true,
+    zipcode: 20011, medical_needs: false,
     owner: armand)

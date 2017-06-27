@@ -21,10 +21,10 @@
     PetSittersShowControllerFunction
   ])
   .controller("PetNewController", [
-  "$state",
-  "CreatePetFactory",
-  "$stateParams",
-  PetNewControllerFunction
+    "$state",
+    "CreatePetFactory",
+    "$stateParams",
+    PetNewControllerFunction
   ])
   .controller("OwnersController", [
     "PetSitterOwnerFactory",

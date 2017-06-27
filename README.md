@@ -3,7 +3,7 @@ Pet owners find local pet sitters and pet sitters find pet owners in need of a s
 
 
 ## Technologies used:
-
+Angular, Rails API, Angular-filter, jQuery, HTML5, CSS
 
 
 ## The build:
@@ -31,3 +31,4 @@ Your app must...
 ***
 
 ## Sources used for information and hosting.
+-https://github.com/a8m/angular-filter#get-started

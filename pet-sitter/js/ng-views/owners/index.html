@@ -2,14 +2,29 @@
 
 <input type="text" data-ng-model="vm.byPetType">
 <input type="text" data-ng-model="vm.byZipcode">
-<select data-ng-model="vm.byPetType">
+
+<!-- <select data-ng-model="vm.byPetType">
   <option value="">Dog</option>
   <option value="">Cat</option>
   <option value="">Reptile</option>
   <option value="">Bird</option>
+</select> -->
+
+<select ng-model="vm.byPetType">
+         <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | limitTo: {}" ng-value="vm.pet_type">{{pet.pet_type}}</option>
+</select>
+<select ng-model="vm.byZipcode">
+         <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets" ng-value="vm.zipcode">{{pet.zipcode}}</option>
 </select>
 
-<div data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode}">
+<!-- <select data-ng-model="vm.thepets" ng-options="x.pet_type for x in vm.pets | filter: {name: vm.thepets}">
+</select>
+
+<h1>You selected: {{vm.thepets.pet_type}}</h1>
+<p>Its name is: {{vm.thepets.name}}</p> -->
+
+
+<div data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType}">
   <ul>
     <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
     <li>{{pet.pet_type}}</li>

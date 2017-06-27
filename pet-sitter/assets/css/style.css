@@ -19,29 +19,44 @@ body {
   margin: 0;
   padding: 0;
 }
+
+a.navbar-brand {
+  font-size: 18px;
+}
+
 .navbar-inverse {
   background-color: white;
-  border-color: white;
+  border-bottom: 2px solid;
+  border-bottom-color: green;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: black;
+  color: green;
+
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-  color: red;
+  color: green;
+  font-weight: bold;
 }
 
 .navbar-inverse .navbar-brand {
-  color: black;
+  color: green;
 }
 
 .navbar-inverse .navbar-brand:hover {
-  color: red;
+  color: green;
+  font-weight: bold;
 }
 
 img {
-  width: 300px;
+  object-fit: cover;
+  width:280px;
+  height:280px;
+}
+
+.hover:hover {
+  background-color: grey;
 }
 
 h1 {
@@ -55,12 +70,38 @@ h1 {
   width: 50%;
 }*/
 
+.sitters_header {
+  background: url('http://i68.tinypic.com/2eek09d.jpg') no-repeat center center;
+  /*height: 330px;*/
+  margin: 0;
+  padding: 0;
+}
+
+.sitters_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.profile_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.description {
+  border: 1px solid grey;
+}
+.btn-default {
+  color: green;
+  border-color: white;
+  font-weight: bold;
+}
 .overlay {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 350px;
+  padding-top: 150px;
+  padding-bottom: 310px;
 }

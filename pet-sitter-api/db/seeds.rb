@@ -370,9 +370,9 @@ alberta = Sitter.create(name: "Alberta Meece",
   price: 75)
 
 
-benley = Pet.create(name: "Benley", photo_url: "https://s-media-cache-ak0.pinimg.com/736x/e6/6d/db/e66ddbe6925551552200514fe8d114bc.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, medical_needs: true, owner: bob);
+benley = Pet.create(name: "Benley", photo_url: "https://s-media-cache-ak0.pinimg.com/736x/e6/6d/db/e66ddbe6925551552200514fe8d114bc.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, medical_needs: false, owner: bob);
 
-flash = Pet.create(name: "Flash", photo_url: "https://www.aspca.org/sites/default/files/cat-care_cat-nutrition-tips_overweight_body4_left.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 20009, medical_needs: false, owner: bob)
+flash = Pet.create(name: "Flash", photo_url: "https://www.aspca.org/sites/default/files/cat-care_cat-nutrition-tips_overweight_body4_left.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 20009, medical_needs: true, owner: bob)
 
 socks = Pet.create(name: "Socks",
   photo_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2wQYfcv47DV4uLB3QH69jvaUwwzR1qmjAG1tVfwGwAaMIAiH0Q",
@@ -387,7 +387,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-26 6:00",
     end_date: "2017-8-20 12:00",
-    zipcode: 20109, medical_needs: true,
+    zipcode: 20109, medical_needs: false,
     owner: bibi)
 
   oscar = Pet.create(name: "Oscar",
@@ -395,7 +395,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "bird",
     start_date: "2017-6-26 6:00",
     end_date: "2017-7-20 12:00",
-    zipcode: 20001, medical_needs: false,
+    zipcode: 20001, medical_needs: true,
     owner: flint)
 
   snow = Pet.create(name: "Snow",
@@ -403,7 +403,7 @@ socks = Pet.create(name: "Socks",
       pet_type: "cat",
       start_date: "2017-6-28 6:00",
       end_date: "2017-8-20 12:00",
-      zipcode: 20002, medical_needs: false,
+      zipcode: 20002, medical_needs: true,
       owner: seline)
 
   buddy = Pet.create(name: "Buddy",
@@ -411,7 +411,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-6-26 8:00",
     end_date: "2017-7-1 13:00",
-    zipcode: 20111, medical_needs: false,
+    zipcode: 20111, medical_needs: true,
     owner: nial)
 
   fifi = Pet.create(name: "Fifi",
@@ -419,7 +419,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-26 6:00",
     end_date: "2017-8-5 12:00",
-    zipcode: 20176, medical_needs: true,
+    zipcode: 20176, medical_needs: false,
     owner: kathryn)
 
   simba = Pet.create(name: "Simba",
@@ -427,7 +427,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-27 10:00",
     end_date: "2017-7-3 11:00",
-    zipcode: 20001, medical_needs: false,
+    zipcode: 20001, medical_needs: true,
     owner: kathryn)
 
   remy = Pet.create(name: "Remy",
@@ -435,7 +435,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-8-1 9:00",
     end_date: "2017-8-4 12:00",
-    zipcode: 20001, medical_needs: false,
+    zipcode: 20001, medical_needs: true,
     owner: sara)
 
   harry = Pet.create(name: "Harry",
@@ -443,7 +443,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-8-1 9:00",
     end_date: "2017-8-4 12:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: sara)
 
   rush = Pet.create(name: "Rush",
@@ -451,7 +451,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-8-1 9:00",
     end_date: "2017-8-4 12:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: sara)
 
   ginger = Pet.create(name: "Ginger",
@@ -459,7 +459,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-7-26 8:00",
     end_date: "2017-7-28 11:00",
-    zipcode: 20146, medical_needs: true,
+    zipcode: 20146, medical_needs: false,
     owner: jazmin)
 
   wrinkles = Pet.create(name: "Wrinkles",
@@ -467,7 +467,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-1 6:00",
     end_date: "2017-7-13 11:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: murry)
 
   pink = Pet.create(name: "Pink",
@@ -475,7 +475,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-7-1 6:00",
     end_date: "2017-7-13 11:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: murry)
 
   chia = Pet.create(name: "Chia",
@@ -483,7 +483,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-8-9 7:00",
     end_date: "2017-8-15 10:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: netti)
 
   pacer = Pet.create(name: "Pacer",
@@ -491,7 +491,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-8-9 7:00",
     end_date: "2017-8-15 10:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: netti)
 
   umber = Pet.create(name: "Umber",
@@ -499,7 +499,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-8-9 7:00",
     end_date: "2017-8-15 10:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: netti)
 
   pearl = Pet.create(name: "Pearl",
@@ -507,7 +507,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-7-9 8:00",
     end_date: "2017-7-12 10:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: dora)
 
   olive = Pet.create(name: "Olive",
@@ -515,7 +515,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-7-9 8:00",
     end_date: "2017-7-12 10:00",
-    zipcode: 20107, medical_needs: false,
+    zipcode: 20107, medical_needs: true,
     owner: dora)
 
   buzz = Pet.create(name: "Buzz",
@@ -523,7 +523,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "bird",
     start_date: "2017-7-9 8:00",
     end_date: "2017-7-12 10:00",
-    zipcode: 20107, medical_needs: true,
+    zipcode: 20107, medical_needs: false,
     owner: dora)
 
   sunshine = Pet.create(name: "Sunshine",
@@ -531,7 +531,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-6-30 9:00",
     end_date: "2017-7-3 12:00",
-    zipcode: 20009, medical_needs: false,
+    zipcode: 20009, medical_needs: true,
     owner: iago)
 
   robyn = Pet.create(name: "Robyn-Ivy",
@@ -539,7 +539,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-30 9:00",
     end_date: "2017-7-3 12:00",
-    zipcode: 20009, medical_needs: false,
+    zipcode: 20009, medical_needs: true,
     owner: iago)
 
   arty = Pet.create(name: "Arty",
@@ -547,7 +547,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-7-28 9:00",
     end_date: "2017-8-3 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: carita)
 
   max = Pet.create(name: "Max",
@@ -555,7 +555,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-28 9:00",
     end_date: "2017-8-3 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: carita)
 
   bree = Pet.create(name: "Bree",
@@ -563,7 +563,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-28 9:00",
     end_date: "2017-8-3 10:00",
-    zipcode: 20011, medical_needs: true,
+    zipcode: 20011, medical_needs: false,
     owner: carita)
 
   vale = Pet.create(name: "Vale",
@@ -571,7 +571,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "bird",
     start_date: "2017-7-28 8:00",
     end_date: "2017-7-29 9:00",
-    zipcode: 20001, medical_needs: false,
+    zipcode: 20001, medical_needs: true,
     owner: sonnie)
 
   ellie = Pet.create(name: "Ellie",
@@ -579,7 +579,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-28 9:00",
     end_date: "2017-7-5 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: jeri)
 
   dottie = Pet.create(name: "Dottie",
@@ -587,7 +587,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "reptile",
     start_date: "2017-7-28 11:00",
     end_date: "2017-8-3 12:00",
-    zipcode: 20011, medical_needs: true,
+    zipcode: 20011, medical_needs: false,
     owner: amos)
 
   bolt = Pet.create(name: "Bolt",
@@ -595,7 +595,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-1 8:00",
     end_date: "2017-7-1 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: stevey)
 
   benji = Pet.create(name: "Benji",
@@ -603,7 +603,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-7-1 8:00",
     end_date: "2017-7-1 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: stevey)
 
   west = Pet.create(name: "West",
@@ -611,7 +611,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-16 7:00",
     end_date: "2017-7-18 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: vinni)
 
   shadow = Pet.create(name: "Shadow",
@@ -619,7 +619,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "bird",
     start_date: "2017-7-2 9:00",
     end_date: "2017-7-2 10:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: samson)
 
   ty = Pet.create(name: "Ty",
@@ -627,7 +627,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "dog",
     start_date: "2017-7-18 9:00",
     end_date: "2017-7-21 10:00",
-    zipcode: 20011, medical_needs: true,
+    zipcode: 20011, medical_needs: false,
     owner: odo)
 
   star = Pet.create(name: "Star",
@@ -635,7 +635,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-8-16 6:00",
     end_date: "2017-8-19 9:00",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: brewer)
 
   tanner = Pet.create(name: "Tanner",
@@ -643,7 +643,7 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-7-23 11:00",
     end_date: "2017-7-6 12:30",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: wenonah)
 
   lyon = Pet.create(name: "Lyon",
@@ -651,5 +651,5 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-29 10:00",
     end_date: "2017-7-3 12:30",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: armand)

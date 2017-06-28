@@ -8,21 +8,50 @@
 <div class="site_wrapper">
   <div class="filter_box">
     <input type="text" placeholder="Name" data-ng-model="vm.byName">
-    <input type="text" placeholder="Zipcode" data-ng-model="vm.byZipcode">
+    <button id="clear-filter" ng-click="vm.byName = undefined" type="button">Clear Name</button>
 
-    <select ng-model="vm.byName">
-      <option ng-selected="vm.byName" ng-repeat="sitter in vm.sitters | unique: 'name'" ng-value="vm.name">{{sitter.name}}</option>
-    </select>
     <select ng-model="vm.byZipcode">
-      <option ng-selected="vm.byZipcode" ng-repeat="sitter in vm.sitters | unique: 'zipcode'" ng-value="vm.zipcode">{{sitter.zipcode}}</option>
+      <option value="">Search by zipcode...</option>
+      <option ng-repeat="sitter in vm.sitters | unique: 'zipcode'" ng-value="vm.zipcode">{{sitter.zipcode}}</option>
     </select>
+    <button id="clear-filter" ng-click="vm.byZipcode = undefined" type="button">Clear Zipcode</button>
+
+
+    <div data-ng-model="vm.byPrice" ng-repeat="sitter in vm.sitters" ng-value="sitter.price">
+    </div>
+
+    <div>
+      <rzslider rz-slider-model="priceSlider" ng-model="vm.byPrice" ng-value="vm.price"></rzslider>
+    </div>
+
+    <input type="range" value="30" min="40" max="90" step="5" list="tickmarks" ng-model="vm.byPrice" ng-value="vm.price"/>
+    <datalist id="tickmarks">
+      <option value="0">
+      <option value="10">
+      <option value="20">
+      <option value="30">
+      <option value="40">
+      <option value="50">
+      <option value="60">
+      <option value="70">
+      <option value="80">
+      <option value="90">
+      <option value="100">
+    </datalist>
+
+
+    <select ng-model="vm.byPrice">
+      <option value="">Search by Price...</option>
+      <option ng-repeat="sitter in vm.sitters | unique: 'price'" ng-value="vm.price">{{sitter.price}}</option>
+    </select>
+
   </div>
 
-
   <div class="profile_wrapper">
-    <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode}">
+    <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
       <div class="img-thumbnail hover description">
-        <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" ng-src="{{sitter.photo_url}}"/></a>
+
+        <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
         <ul>
           <li><a data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></li>
           <li>{{sitter.phone}}</li>

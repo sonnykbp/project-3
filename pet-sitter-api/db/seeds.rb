@@ -123,7 +123,8 @@ flint = Owner.create(name: "Flint Carde",
   phone: "215-543-0441",
   email: "ascarrottk@marketwatch.com")
 
-nancy = Sitter.create(name: "Nancy Price", photo_url: "https://pbs.twimg.com/profile_images/467092443/fp_1713383_jennifer_aniston_shares_a_smile_with_the_photographers.0.0.0x0.400x633.jpeg", phone: "1223", email: "nancy@goote.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, pet_type: ['dog', 'cat', 'reptiles', 'birds'], price: 50, service: ['boarding', 'drop-in']);
+nancy = Sitter.create(name: "Nancy Price", photo_url: "https://pbs.twimg.com/profile_images/467092443/fp_1713383_jennifer_aniston_shares_a_smile_with_the_photographers.0.0.0x0.400x633.jpeg", phone: "1223", email: "nancy@goote.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, pet_type: ['dog', 'cat', 'reptiles', 'birds'], price: 50, service: ['boarding', 'drop-in'],
+carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"]);
 
 roy = Sitter.create(name: "Roy Rogers", photo_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MjYwNTE2M15BMl5BanBnXkFtZTYwNTI0NjI1._V1_UX214_CR0,0,214,317_AL_.jpg", phone: "8339920", email: "roy@rogers.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22180, pet_type: ['dog', 'cat'], service: ['drop-in', 'house sitting'], price: 80, carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
@@ -136,7 +137,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 22187,
   pet_type: ['dog', 'bird'],
   service: ['drop-in'],
-  price: 65)
+  price: 65,
+  carousel_img: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxe4TGQxd6_Go4jEXC1dYRfIHeABGHx64jlS6Vns_BT0rig0V0",  "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg",  "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   urbanus = Sitter.create(name: "Urbanus Ghio",
     photo_url: "https://images.pexels.com/photos/48647/pexels-photo-48647.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -147,7 +149,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20009,
     pet_type: ['dog', 'bird'],
     service: ['drop-in'],
-    price: 65)
+    price: 65,
+    carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   wynnie = Sitter.create(name: "Wynnie Milmo",
     photo_url: "https://images.pexels.com/photos/57862/pexels-photo-57862.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -158,7 +161,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20009,
     pet_type: ['dog', 'bird'],
     service: ['drop-in', 'house sitting', 'boarding'],
-    price: 45)
+    price: 45,
+    carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
     matilde = Sitter.create(name: "Matilde Daenen",
       photo_url: "https://images.pexels.com/photos/301958/pexels-photo-301958.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -169,7 +173,8 @@ alberta = Sitter.create(name: "Alberta Meece",
       zipcode: 20102,
       pet_type: ['dog', 'bird', 'cat'],
       service: ['drop-in', 'house sitting', 'boarding'],
-      price: 60)
+      price: 60,
+      carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   uriah = Sitter.create(name: "Uriah Yarmouth",
     photo_url: "https://images.pexels.com/photos/316680/pexels-photo-316680.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -180,7 +185,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20100,
     pet_type: ['dog', 'bird', 'cat', 'reptile'],
     service: ['house sitting', 'boarding'],
-    price: 80)
+    price: 80,
+    carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   vonni = Sitter.create(name: "Vonni Payley",
     photo_url: "https://images.pexels.com/photos/241734/pexels-photo-241734.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -191,7 +197,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20001,
     pet_type: ['dog', 'cat', 'reptile'],
     service: ['house sitting', 'boarding', 'drop-in'],
-    price: 85)
+    price: 85,
+    carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   laird = Sitter.create(name: "Laird Frickey",
     photo_url: "https://images.pexels.com/photos/101584/pexels-photo-101584.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -202,7 +209,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20107,
     pet_type: ['reptile'],
     service: ['boarding', 'drop-in'],
-    price: 75)
+    price: 75,
+    carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   remington = Sitter.create(name: "Remington Kingdom",
     photo_url: "https://images.pexels.com/photos/78225/pexels-photo-78225.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -213,7 +221,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20107,
     pet_type: ['reptile', 'cat'],
     service: ['drop-in'],
-    price: 60)
+    price: 60,
+    carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   marielle = Sitter.create(name: "Marielle Soares",
     photo_url: "https://images.pexels.com/photos/275717/pexels-photo-275717.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -224,7 +233,8 @@ alberta = Sitter.create(name: "Alberta Meece",
     zipcode: 20107,
     pet_type: ['bird', 'cat'],
     service: ['drop-in', 'house sitting'],
-    price: 75)
+    price: 75,
+    carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   aymer = Sitter.create(name: "Aymer Highnam",
   photo_url: "https://images.pexels.com/photos/175977/pexels-photo-175977.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -235,7 +245,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20146,
   pet_type: ['dog'],
   service: ['drop-in', 'house sitting'],
-  price: 60)
+  price: 60,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   diena = Sitter.create(name: "Diena Lamberteschi",
   photo_url: "https://images.pexels.com/photos/157023/pexels-photo-157023.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -246,7 +257,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20176,
   pet_type: ['dog'],
   service: ['house sitting'],
-  price: 80)
+  price: 80,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   kenna = Sitter.create(name: "Kenna Eronie",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiLIf0rpJGarqg-Vkhu2EP4V5YT4CZzvghHgS50wCutMQ4ah2zaQ",
@@ -257,7 +269,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20176,
   pet_type: ['dog', 'reptile'],
   service: ['house sitting', 'drop-in'],
-  price: 85)
+  price: 85,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   rollie = Sitter.create(name: "Rollie Stratiff",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbhKfseDE4Z1NDIIM-qc2LneuTs80r3V_tZCGQhTMS8ZbV2eJ2",
@@ -268,7 +281,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20103,
   pet_type: ['dog', 'reptile'],
   service: ['house sitting', 'drop-in'],
-  price: 75)
+  price: 75,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   audra = Sitter.create(name: "Audra Jaggar",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL2V5yeKVp8iq6ijhIozMMT3RCVN-MLJI0N-zAUDxdrnrvK43DZA",
@@ -279,7 +293,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20002,
   pet_type: ['dog', 'cat', 'bird', 'reptile'],
   service: ['house sitting', 'drop-in'],
-  price: 85)
+  price: 85,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   bette = Sitter.create(name: "Bette-ann Stanman",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQATKE4T1d4gfHq1QgIx9GQjDuS9quJ-24qa8LTGd_qRIma35tgEQ",
@@ -290,7 +305,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20109,
   pet_type: ['bird', 'reptile'],
   service: ['house sitting', 'drop-in', 'boarding'],
-  price: 65)
+  price: 65,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   hartwell = Sitter.create(name: "Hartwell Giorgielli",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnjykqKF_n05x0-l3cuMHh9ZyQKq69x4OEh0bj-eQe3g-36d-r",
@@ -301,7 +317,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20111,
   pet_type: ['dog', 'cat', 'reptile'],
   service: ['drop-in'],
-  price: 45)
+  price: 45,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   alfonse = Sitter.create(name: "Alfonse Rameau",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdd9InRGmJTyZtRRjaiyYmV2tCHsSm9oZLu3tCaOszBVvYtmrENA",
@@ -312,7 +329,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20111,
   pet_type: ['reptile'],
   service: ['drop-in', 'house sitting'],
-  price: 55)
+  price: 55,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   blinny = Sitter.create(name: "Blinny Erasmus",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaa7tTjog_7hfLmnJy2tEQi_Ngip3SHhZoc-NMAttx7MqGuu2w",
@@ -323,7 +341,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20111,
   pet_type: ['reptile'],
   service: ['drop-in'],
-  price: 50)
+  price: 50,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   dorotea = Sitter.create(name: "Dorotea Raynor",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeyJ2s32dN5Dl7QCP5_zc2ReKv25-5kOYFYuoWn4cJiUnQFIrFDg",
@@ -334,7 +353,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20235,
   pet_type: ['reptile', 'dog', 'cat'],
   service: ['drop-in'],
-  price: 55)
+  price: 55,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   nikkie = Sitter.create(name: "Nikkie Sherrott",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOo_dgAg7EQnNN16R8E1nHLkBV9OEaVwum5snZElQDQkZzRz1r1w",
@@ -345,7 +365,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20001,
   pet_type: ['reptile', 'dog', 'cat', 'bird'],
   service: ['drop-in'],
-  price: 70)
+  price: 70,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
   renault = Sitter.create(name: "Renault Ronchi",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcEdPcWUoNTzpHWW7cCGh0SdnAs_ncvIjdi3FeVO1Gp_-UkD2b",
@@ -356,7 +377,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20001,
   pet_type: ['reptile', 'dog', 'cat', 'bird'],
   service: ['drop-in', 'house sitting', 'boarding'],
-  price: 85)
+  price: 85,
+  carousel_img: ["http://media.gettyimages.com/photos/chloe-rice-with-lily-the-python-at-home-in-cambridgeshire-england-to-picture-id174517446", "https://i.ytimg.com/vi/lowh31qYjrY/maxresdefault.jpg", "http://interiorsbystudiom.com/wp-content/uploads/2013/12/bed.jpg", "http://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Robin-Wilson-contemporary-living-room_s4x3.jpg.rend.hgtvcom.966.725.jpeg"])
 
   fabio = Sitter.create(name: "Fabio Wyllie",
   photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oRii6fTWfGdjfNqzAIB0WiWz75B7GxbnrmxopIliek8sJcrZ",
@@ -367,7 +389,8 @@ alberta = Sitter.create(name: "Alberta Meece",
   zipcode: 20001,
   pet_type: ['bird'],
   service: ['drop-in', 'house sitting', 'boarding'],
-  price: 75)
+  price: 75,
+  carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
 
 benley = Pet.create(name: "Benley", photo_url: "https://s-media-cache-ak0.pinimg.com/736x/e6/6d/db/e66ddbe6925551552200514fe8d114bc.jpg", pet_type: "cat", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, medical_needs: false, owner: bob);

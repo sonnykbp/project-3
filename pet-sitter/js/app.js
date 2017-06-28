@@ -122,7 +122,9 @@
   function PetNewControllerFunction($state, CreatePetFactory, $stateParams){
     this.pet = new CreatePetFactory();
     this.create = function(){
-      this.pet.$save({owner_id: $stateParams.id})
+      this.pet.$save({owner_id: $stateParams.id}).then(()=>{
+      $state.go("PetSitterOwnerShow")
+    })
     }
   }
 

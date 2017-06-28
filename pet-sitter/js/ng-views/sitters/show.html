@@ -1,9 +1,73 @@
-<h1>Sitter's Profile</h1>
+<div class="sitter_profile_header">
+  <img data-ng-src="{{vm.sitter.photo_url}}" class="resize img-thumbnail sitter_profile_img"/>
+</div>
 
-<img ng-src="{{sitter.photo_url}}"/>
-<p>{{vm.sitter.name}}</p>
-<p>{{vm.sitter.phone}}</p>
-<p>{{vm.sitter.email}}</p>
-<p>{{vm.sitter.pet_type}}</p>
-<p>{{vm.sitter.service}}</p>
-<p>{{vm.sitter.email}}</p>
+
+<div class="site_wrapper">
+<div class="profile_wrapper">
+  <div class="profile-box">
+    <div class="sitter_profile_name">
+      <h2>{{vm.sitter.name}}</h2>
+      <p>{{vm.sitter.phone}}</p>
+      <p>{{vm.sitter.zipcode}}</p>
+      <p>{{vm.sitter.email}}</p>
+      <p>${{vm.sitter.price}}</p>
+    </div>
+
+    <div class="sitter_profile_description">
+      <p>Pet Types:</p>
+      <ul data-ng-repeat="type in vm.sitter.pet_type">
+        <li>{{type}}</li>
+      </ul>
+
+      <p>Services:</p>
+      <ul data-ng-repeat="service in vm.sitter.service">
+        <li>{{service}}</li>
+      </ul>
+    </div>
+
+  </div>
+  <a href="mailto:{{vm.sitter.email}}.com?Subject=Hello" target="_top">Contact {{vm.sitter.name}}</a>
+</div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          <div class="item  active">
+            <div class="row">
+              <div class="col-md-3" data-ng-repeat="carousel in vm.sitter.carousel_img">
+                <a class="thumbnail"><img alt="" data-ng-src="{{carousel}}"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3" data-ng-repeat="carousel in vm.sitter.carousel_img">
+                <a class="thumbnail"><img alt="" data-ng-src="{{carousel}}"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="col-md-3"  data-ng-repeat="carousel in vm.sitter.carousel_img">
+                <a class="thumbnail"><img alt="" data-ng-src="{{carousel}}"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

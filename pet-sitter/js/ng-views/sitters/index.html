@@ -22,13 +22,17 @@
   <div class="profile_wrapper">
     <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode}">
       <div class="img-thumbnail hover description">
-        <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize"src="{{sitter.photo_url}}"/></a>
+        <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" src="{{sitter.photo_url}}"/></a>
         <ul>
           <li><a data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></li>
           <li>{{sitter.phone}}</li>
           <li>{{sitter.email}}</li>
-          <li>{{sitter.pet_type}}</li>
-          <li>{{sitter.service}}</li>
+            <ul>
+              <li ng-repeat="sitter1 in sitter.pet_type">{{sitter1}}</li>
+            </ul>
+            <ul>
+              <li ng-repeat="sitter2 in sitter.service">{{sitter2}}</li>
+            </ul>
           <li>{{sitter.zipcode}}</li>
           <li>${{sitter.price}}</li>
         </ul>
@@ -36,4 +40,3 @@
       </div>
     </div>
   </div>
-

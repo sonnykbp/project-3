@@ -6,7 +6,8 @@
   .module("petSitter", [
     "ui.router",
     "ngResource",
-    "angular.filter"
+    "angular.filter",
+    "rzModule"
   ])
   .config([
     "$stateProvider",
@@ -111,15 +112,7 @@
 
   function PetSittersControllerFunction(PetSitterFactory) {
     this.sitters = PetSitterFactory.query()
-    this.slider = {
-      minValue: 10,
-      maxValue: 90,
-      options: {
-          floor: 0,
-          ceil: 100,
-          step: 1
-      }
-    }
+    this.priceSlider = 150;
   }
 
   function PetSittersShowControllerFunction($stateParams, PetSitterFactory) {

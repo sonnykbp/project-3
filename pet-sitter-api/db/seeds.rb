@@ -125,7 +125,7 @@ flint = Owner.create(name: "Flint Carde",
 
 nancy = Sitter.create(name: "Nancy Price", photo_url: "https://pbs.twimg.com/profile_images/467092443/fp_1713383_jennifer_aniston_shares_a_smile_with_the_photographers.0.0.0x0.400x633.jpeg", phone: "1223", email: "nancy@goote.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22182, pet_type: ['dog', 'cat', 'reptiles', 'birds'], price: 50, service: ['boarding', 'drop-in']);
 
-roy = Sitter.create(name: "Roy Rogers", photo_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MjYwNTE2M15BMl5BanBnXkFtZTYwNTI0NjI1._V1_UX214_CR0,0,214,317_AL_.jpg", phone: "8339920", email: "roy@rogers.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22180, pet_type: ['dog', 'cat'], service: ['drop-in', 'house sitting'], price: 80)
+roy = Sitter.create(name: "Roy Rogers", photo_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MjYwNTE2M15BMl5BanBnXkFtZTYwNTI0NjI1._V1_UX214_CR0,0,214,317_AL_.jpg", phone: "8339920", email: "roy@rogers.com", start_date: "2017-6-30 9:45", end_date: "2017-7-02 12:30", zipcode: 22180, pet_type: ['dog', 'cat'], service: ['drop-in', 'house sitting'], price: 80, carousel_img: ["http://termitemd.com/wp-content/uploads/2013/03/Fleas-in-living-room-with-pet.jpg", "http://protectivepestcontrol.com/wp-content/uploads/2015/01/ticks-yard.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNM3xG3-QlQDilY4HAGjBEIkQM0Na3no4vcFObVgO6XT7hm0-LA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMJmIJ0ngYIH6Npdta4v5C7aNmKsP0c5HcNc6o4FAB3ZURWZYGvg"])
 
 alberta = Sitter.create(name: "Alberta Meece",
   photo_url: "https://images.pexels.com/photos/157661/young-woman-shooting-model-157661.jpeg?h=350&auto=compress&cs=tinysrgb",
@@ -651,5 +651,5 @@ socks = Pet.create(name: "Socks",
     pet_type: "cat",
     start_date: "2017-6-29 10:00",
     end_date: "2017-7-3 12:30",
-    zipcode: 20011, medical_needs: false,
+    zipcode: 20011, medical_needs: true,
     owner: armand)

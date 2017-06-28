@@ -50,6 +50,7 @@
   <div class="profile_wrapper">
     <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
       <div class="img-thumbnail hover description">
+
         <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
         <ul>
           <li><a data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></li>

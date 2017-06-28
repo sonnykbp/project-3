@@ -11,6 +11,7 @@ class CreateSitters < ActiveRecord::Migration[5.1]
       t.text :pet_type, array: true
       t.text :service, array: true
       t.integer :price
+      t.text :carousel_img, array: true
 
       t.timestamps
     end

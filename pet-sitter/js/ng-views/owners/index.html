@@ -36,7 +36,9 @@
 <div class="profile_wrapper">
   <div class="sitters_wrapper" data-ng-repeat="pet in vm.pets | filter: {pet_type: vm.byPetType} | filter: {zipcode: vm.byZipcode} | filter: {x: vm.petType} | filter: {medical_needs: vm.byMedication}">
     <div class="img-thumbnail hover description">
+
       <a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})"><img class="resize" data-ng-src="{{pet.photo_url}}"/></a>
+
       <ul>
         <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
         <li>{{pet.pet_type}}</li>

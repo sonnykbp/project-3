@@ -6,30 +6,25 @@
 
 <div class="site_wrapper">
   <div class="filter_box">
-    <input type="text" data-ng-model="vm.byPetType">
     <select ng-model="vm.byPetType">
-      <option ng-selected="vm.byPetType" ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type}}</option>
+      <option value="">Select Pet Type...</option>
+      <option ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type.toUpperCase()}}</option>
     </select>
+      <button id="clear-filter" ng-click="vm.byPetType = undefined", "vm.byZipcode = undefined" type="button">Clear Pets</button>
 
-
-
-
-
-    <input type="text" data-ng-model="vm.byZipcode">
     <select ng-model="vm.byZipcode">
-      <option ng-selected="vm.byZipcode" ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
+      <option value="">Search by zipcode...</option>
+      <option ng-repeat="pet in vm.pets | unique: 'zipcode'" ng-value="vm.zipcode">{{pet.zipcode}}</option>
     </select>
+      <button id="clear-filter" ng-click="vm.byZipcode = undefined" type="button">Clear Zipcode</button>
 
     <p>If you are not okay delivering pet medications, select box.</p>
     <input type="checkbox" data-ng-model="vm.byMedication">
+
+    <button id="clear-filter" ng-click="vm.byMedication = undefined" type="button">Clear Medication Needs</button>
+
   </div>
 
-  <!-- <select data-ng-model="vm.byPetType">
-  <option value="">Dog</option>
-  <option value="">Cat</option>
-  <option value="">Reptile</option>
-  <option value="">Bird</option>
-</select> -->
 
 
 <!-- <select data-ng-model="vm.thepets" ng-options="x.pet_type for x in vm.pets | filter: {name: vm.thepets}">

@@ -17,6 +17,12 @@
     "PetSitterFactory",
     PetSittersControllerFunction
   ])
+  .controller("PetEditController", [
+    "$state",
+    "PetFactory",
+    "$stateParams",
+    PetEditControllerFunc
+    ])
   .controller("ShowController", [
     "$stateParams",
     "PetSitterFactory",
@@ -24,7 +30,7 @@
   ])
   .controller("PetNewController", [
     "$state",
-    "CreatePetFactory",
+    "PetFactory",
     "$stateParams",
     PetNewControllerFunction
   ])
@@ -45,13 +51,13 @@
     "$resource",
     FactoryOwnerFunction
   ])
+  .factory("PetFactory", [
+    "$resource",
+    FactoryPetFunc
+  ])
   .factory("PetSitterOwnerShowFactory", [
     "$resource",
     FactoryOwnerShowFunction
-  ])
-  .factory("CreatePetFactory", [
-    "$resource",
-    FactoryCreatePetFunc
   ])
 
   function RouterFunction($stateProvider) {
@@ -72,6 +78,12 @@
       url: "/owners/:id/pets/new",
       templateUrl: "js/ng-views/pets/new.html",
       controller: "PetNewController",
+      controllerAs: "vm"
+    })
+    .state("petEdit", {
+      url: "/owners/:owner_id/pets/:id/edit",
+      templateUrl: "js/ng-views/pets/edit.html",
+      controller: "PetEditController",
       controllerAs: "vm"
     })
     .state("PetSitterOwnerShow", {
@@ -98,6 +110,12 @@
     return $resource("http://localhost:3000/sitters/:id");
   }
 
+  function FactoryPetFunc($resource) {
+    return $resource("http://localhost:3000/owners/:owner_id/pets/:id", {}, {
+      update: { method: "PUT" }
+    });
+  }
+
   function FactoryOwnerFunction($resource) {
     return $resource("http://localhost:3000/pets/all_pets");
   }
@@ -106,24 +124,40 @@
     return $resource("http://localhost:3000/owners/:id");
   }
 
-  function FactoryCreatePetFunc($resource) {
-    return $resource("http://localhost:3000/owners/:owner_id/pets");
-  }
-
   function PetSittersControllerFunction(PetSitterFactory) {
     this.sitters = PetSitterFactory.query()
-    this.priceSlider = 150;
+    this.slider = {
+    minValue: 10,
+    maxValue: 90,
+    options: {
+        floor: 0,
+        ceil: 100,
+        step: 1
+    }
+  }
+  }
+
+  function PetEditControllerFunc( $state, PetFactory, $stateParams){
+    this.pet = PetFactory.get({owner_id: $stateParams.owner_id, id: $stateParams.id});
+    this.update = function(){
+      this.pet.$update({owner_id: $stateParams.owner_id, id: $stateParams.id}).then(()=>{
+        $state.go("PetSitterOwnerShow", {owner_id: $stateParams.owner_id})
+      })
+    }
+    this.destroy = function(){
+      this.pet.$delete({id: $stateParams.id})
+    }
   }
 
   function PetSittersShowControllerFunction($stateParams, PetSitterFactory) {
     this.sitter = PetSitterFactory.get({id: $stateParams.id})
   }
 
-  function PetNewControllerFunction($state, CreatePetFactory, $stateParams){
-    this.pet = new CreatePetFactory();
+  function PetNewControllerFunction($state, PetFactory, $stateParams){
+    this.pet = new PetFactory();
     this.create = function(){
       this.pet.$save({owner_id: $stateParams.id}).then(()=>{
-      $state.go("PetSitterOwnerShow")
+      $state.go("PetSitterOwnerShow", {id: $stateParams.id})
     })
     }
   }

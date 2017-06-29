@@ -160,7 +160,7 @@
     this.create = function(){
       console.log($stateParams)
       this.pet.$save({owner_id: $stateParams.id}).then(()=>{
-      $state.go("PetSitterOwnerShow", {id: $stateParams.owner_id})
+      $state.go("PetSitterOwnerShow", {id: $stateParams.id})
       console.log($stateParams)
     })
     }

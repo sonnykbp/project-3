@@ -8,7 +8,7 @@
 <div class="site_wrapper">
   <div class="filter_box">
     <input type="text" placeholder="Name" data-ng-model="vm.byName">
-    <button id="clear-filter" ng-click="vm.byName = undefined" type="button">Clear Name</button>
+    <button class="left_owner_group" id="clear-filter" ng-click="vm.byName = undefined" type="button">Clear Name</button>
 
     <select ng-model="vm.byZipcode">
       <option value="">Search by zipcode...</option>
@@ -20,57 +20,57 @@
     <div data-ng-model="vm.byPrice" ng-repeat="sitter in vm.sitters" ng-value="sitter.price">
     </div>
 
-    <input type="range" value="30" min="40" max="90" step="5" list="tickmarks" ng-model="vm.byPrice" />
+    <input class="slider_line" type="range" value="30" min="40" max="90" step="5" list="tickmarks" ng-model="vm.byPrice" />
     <datalist id="tickmarks">
-      <option value="0">
-        <option value="10">
-          <option value="20">
-            <option value="30">
-              <option value="40">
-                <option value="50">
-                  <option value="60">
-                    <option value="70">
-                      <option value="80">
-                        <option value="90">
-                          <option value="100">
-                          </datalist>
+      <option value="0"></option>
+      <option value="10"></option>
+      <option value="20"></option>
+      <option value="30"></option>
+      <option value="40"></option>
+      <option value="50"></option>
+      <option value="60"></option>
+      <option value="70"></option>
+      <option value="80"></option>
+      <option value="90"></option>
+      <option value="100"></option>
+    </datalist>
+    <button id="clear-filter" ng-click="vm.byPrice = undefined" type="button">Clear Price Filter</button>
+
+    <!-- <div>
+    <rzslider rz-slider-model="vm.slider.minValue"
+    rz-slider-high="vm.slider.maxValue"
+    rz-slider-options="vm.slider.options" ng-value="vm.price" ></rzslider>
+  </div>
+</div> -->
+
+<div class="profile_wrapper">
+  <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
+    <div class="img-thumbnail hover description">
+
+      <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
+
+      <h3 style="text-align: center;"><a style="color: green; text-decoration: none;"data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></h3>
+      <p style="text-align: center;"><span>${{sitter.price}}</span> per day</p>
+      <!-- <p> Location: {{sitter.zipcode}}</p> -->
+      <!-- <li>{{sitter.phone}}</li>
+      <li>{{sitter.email}}</li> -->
+
+      <div style="margin-left: 40px;">
+        <div style="float:left; margin-right: 10px;">
+          <p><span>Pet Types:</span></p>
+          <ul>
+            <li ng-repeat="sitter1 in sitter.pet_type">{{sitter1}}</li>
+          </ul>
+        </div>
+        <div style="float: left;">
+          <p><span>Services:</span></p>
+          <ul>
+            <li ng-repeat="sitter2 in sitter.service">{{sitter2}}</li>
+          </ul>
+        </div>
+      </div>
 
 
-                          <!-- <div>
-                          <rzslider rz-slider-model="vm.slider.minValue"
-                                rz-slider-high="vm.slider.maxValue"
-                                rz-slider-options="vm.slider.options" ng-value="vm.price" ></rzslider>
-                          </div>
-                        </div> -->
-
-                        <div class="profile_wrapper">
-                          <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
-                            <div class="img-thumbnail hover description">
-
-                              <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
-
-                              <h3 style="text-align: center;"><a style="color: green; text-decoration: none;"data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></h3>
-                              <p style="text-align: center;"><span>${{sitter.price}}</span> per day</p>
-                              <!-- <p> Location: {{sitter.zipcode}}</p> -->
-                              <!-- <li>{{sitter.phone}}</li>
-                              <li>{{sitter.email}}</li> -->
-
-                              <div style="margin-left: 40px;">
-                                <div style="float:left; margin-right: 10px;">
-                                  <p><span>Pet Types:</span></p>
-                                  <ul>
-                                    <li ng-repeat="sitter1 in sitter.pet_type">{{sitter1}}</li>
-                                  </ul>
-                                </div>
-                                <div style="float: left;">
-                                  <p><span>Services:</span></p>
-                                  <ul>
-                                    <li ng-repeat="sitter2 in sitter.service">{{sitter2}}</li>
-                                  </ul>
-                                </div>
-                              </div>
-
-
-                            </div>
-                          </div>
-                        </div>
+    </div>
+  </div>
+</div>

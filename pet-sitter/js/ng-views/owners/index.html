@@ -6,11 +6,12 @@
 
 <div class="site_wrapper">
   <div class="filter_box">
+
     <select ng-model="vm.byPetType">
       <option value="">Select Pet Type...</option>
       <option ng-repeat="pet in vm.pets | unique: 'pet_type'" ng-value="vm.pet_type">{{pet.pet_type.toUpperCase()}}</option>
     </select>
-      <button id="clear-filter" ng-click="vm.byPetType = undefined" type="button">Clear Pets</button>
+      <button class="left_owner_group" id="clear-filter" ng-click="vm.byPetType = undefined" type="button">Clear Pets</button>
 
     <select ng-model="vm.byZipcode">
       <option value="">Search by zipcode...</option>

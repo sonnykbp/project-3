@@ -59,13 +59,6 @@
     "$resource",
     FactoryOwnerShowFunction
   ])
-  .filter('range', function(){
-    return function(items, property, min, max) {
-      return items.filter(function(item){
-        return item[property] >= min && item[property] <= max;
-      });
-    };
-  });
 
   function RouterFunction($stateProvider) {
     $stateProvider
@@ -134,14 +127,14 @@
   function PetSittersControllerFunction(PetSitterFactory) {
     this.sitters = PetSitterFactory.query()
     this.slider = {
-    minValue: 10,
-    maxValue: 90,
-    options: {
-        floor: 0,
-        ceil: 100,
-        step: 1
-    }
-  }
+      minValue: 10,
+      maxValue: 90,
+      options: {
+          floor: 0,
+          ceil: 100,
+          step: 1
+        }
+      }
   }
 
   function PetEditControllerFunc( $state, PetFactory, $stateParams){
@@ -152,10 +145,8 @@
       })
     }
     this.destroy = function(){
-console.log($stateParams)
       this.pet.$delete({owner_id: $stateParams.owner_id, id: $stateParams.id}).then(()=>{
         $state.go("PetSitterOwnerShow", {id: $stateParams.owner_id})
-        console.log($stateParams)
       })
     }
   }
@@ -167,6 +158,7 @@ console.log($stateParams)
   function PetNewControllerFunction($state, PetFactory, $stateParams){
     this.pet = new PetFactory();
     this.create = function(){
+      console.log($stateParams)
       this.pet.$save({owner_id: $stateParams.id}).then(()=>{
       $state.go("PetSitterOwnerShow", {id: $stateParams.owner_id})
       console.log($stateParams)

@@ -4,31 +4,38 @@
 
 
 <div class="site_wrapper">
-<div class="profile_wrapper">
-  <div class="profile-box">
-    <div class="sitter_profile_name">
-      <h2>{{vm.sitter.name}}</h2>
-      <p>{{vm.sitter.phone}}</p>
-      <p>{{vm.sitter.zipcode}}</p>
-      <p>{{vm.sitter.email}}</p>
-      <p>${{vm.sitter.price}}</p>
+  <div class="profile_wrapper">
+    <div class="profile-box">
+
+      <div class="sitter_profile_name">
+        <h2 style="margin: 0; text-align: center;">{{vm.sitter.name}}</h2>
+        <br>
+        <p><span>${{vm.sitter.price}}</span> per day</p>
+        <p><span>Phone:</span> {{vm.sitter.phone}}</p>
+        <p><span>Location:</span> {{vm.sitter.zipcode}}</p>
+        <p><span>Email:</span> {{vm.sitter.email}}</p>
+      </div>
+
+
+      <div class="sitter_profile_description" style="margin-top: 30px; margin-right: 50px;">
+        <br>
+        <p><span>Pet Types:</span></p>
+        <ul data-ng-repeat="type in vm.sitter.pet_type">
+          <li>{{type}}</li>
+        </ul>
+      </div>
+
+      <div class="sitter_profile_description" style="margin-top: 30px;">
+        <br>
+        <p><span>Services:</span></p>
+        <ul data-ng-repeat="service in vm.sitter.service">
+          <li>{{service}}</li>
+        </ul>
+      </div>
+
     </div>
-
-    <div class="sitter_profile_description">
-      <p>Pet Types:</p>
-      <ul data-ng-repeat="type in vm.sitter.pet_type">
-        <li>{{type}}</li>
-      </ul>
-
-      <p>Services:</p>
-      <ul data-ng-repeat="service in vm.sitter.service">
-        <li>{{service}}</li>
-      </ul>
-    </div>
-
+    <a class="btn btn-lg btn-default" style="border: 1px solid grey; margin-top: 40px;"href="mailto:{{vm.sitter.email}}.com?Subject=Hello" target="_top">Contact {{vm.sitter.name}}</a>
   </div>
-  <a href="mailto:{{vm.sitter.email}}.com?Subject=Hello" target="_top">Contact {{vm.sitter.name}}</a>
-</div>
 </div>
 
 

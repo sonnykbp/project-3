@@ -60,7 +60,7 @@ img.resize {
 }
 
 .hover:hover {
-  background-color: grey;
+  border-color: black;
 }
 
 h1 {
@@ -133,6 +133,12 @@ h1 {
   width: 100%;
   padding: 50px;
   justify-content: center;
+
+}
+
+span {
+  font-weight: bold;
+  color: green;
 }
 
 

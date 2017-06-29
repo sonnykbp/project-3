@@ -27,45 +27,55 @@
     <input type="range" value="30" min="40" max="90" step="5" list="tickmarks" ng-model="vm.byPrice" ng-value="vm.price"/>
     <datalist id="tickmarks">
       <option value="0">
-      <option value="10">
-      <option value="20">
-      <option value="30">
-      <option value="40">
-      <option value="50">
-      <option value="60">
-      <option value="70">
-      <option value="80">
-      <option value="90">
-      <option value="100">
-    </datalist>
+        <option value="10">
+          <option value="20">
+            <option value="30">
+              <option value="40">
+                <option value="50">
+                  <option value="60">
+                    <option value="70">
+                      <option value="80">
+                        <option value="90">
+                          <option value="100">
+                          </datalist>
 
 
-    <select ng-model="vm.byPrice">
-      <option value="">Search by Price...</option>
-      <option ng-repeat="sitter in vm.sitters | unique: 'price'" ng-value="vm.price">{{sitter.price}}</option>
-    </select>
+                          <select ng-model="vm.byPrice">
+                            <option value="">Search by Price...</option>
+                            <option ng-repeat="sitter in vm.sitters | unique: 'price'" ng-value="vm.price">{{sitter.price}}</option>
+                          </select>
 
-  </div>
+                        </div>
 
-  <div class="profile_wrapper">
-    <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
-      <div class="img-thumbnail hover description">
+                        <div class="profile_wrapper">
+                          <div class="sitters_wrapper" data-ng-repeat="sitter in vm.sitters | filter: {name: vm.byName} | filter: {zipcode: vm.byZipcode} | filter: {price: vm.byPrice}">
+                            <div class="img-thumbnail hover description">
 
-        <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
-        <ul>
-          <li><a data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></li>
-          <li>{{sitter.phone}}</li>
-          <li>{{sitter.email}}</li>
-            <ul>
-              <li ng-repeat="sitter1 in sitter.pet_type">{{sitter1}}</li>
-            </ul>
-            <ul>
-              <li ng-repeat="sitter2 in sitter.service">{{sitter2}}</li>
-            </ul>
-          <li>{{sitter.zipcode}}</li>
-          <li>${{sitter.price}}</li>
-        </ul>
+                              <a data-ui-sref="PetSitterShow({id: sitter.id})"><img class="resize" data-ng-src="{{sitter.photo_url}}"/></a>
 
-      </div>
-    </div>
-  </div>
+                              <h3 style="text-align: center;"><a style="color: green; text-decoration: none;"data-ui-sref="PetSitterShow({id: sitter.id})">{{sitter.name}}</a></h3>
+                              <p style="text-align: center;"><span>${{sitter.price}}</span> per day</p>
+                              <!-- <p> Location: {{sitter.zipcode}}</p> -->
+                              <!-- <li>{{sitter.phone}}</li>
+                              <li>{{sitter.email}}</li> -->
+
+                              <div style="margin-left: 40px;">
+                                <div style="float:left; margin-right: 10px;">
+                                  <p><span>Pet Types:</span></p>
+                                  <ul>
+                                    <li>Pet Types:</li>
+                                    <li ng-repeat="sitter1 in sitter.pet_type">{{sitter1}}</li>
+                                  </ul>
+                                </div>
+                                <div style="float: left;">
+                                  <p><span>Services:</span></p>
+                                  <ul>
+                                    <li ng-repeat="sitter2 in sitter.service">{{sitter2}}</li>
+                                  </ul>
+                                </div>
+                              </div>
+
+
+                            </div>
+                          </div>
+                        </div>

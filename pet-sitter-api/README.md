@@ -1,9 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fetch
 
-Things you may want to cover:
+Team Members = Scott, Sonny and Antwana
 
 * Technologies used are:
     Angular, Rails API, Angular-Filter, JQuery, HTML5, CSS
@@ -17,7 +16,7 @@ Things you may want to cover:
 * Our Web application
     We created a pet sitter web application where where a pet owner can locate a pet sitter and a pet sitter can locate a pet. We have three models (pet sitter, pet owner and pet) with pet owner and pet having a one to many relationship.
     In our application a pet owner is able to search for pet sitters by name and location(zipcode) by using a text search or a drop down list. A pet sitter is able to search by location and type of pet. We also included a filter to include or not include a pet that will need to be given medication.
-    
+
 
 
 * System dependencies

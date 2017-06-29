@@ -93,6 +93,7 @@ h1 {
  justify-content: center;
  flex-wrap: wrap;
  align-content: space-around;
+ margin: 0;
 
 }
 
@@ -109,6 +110,14 @@ h1 {
   text-align: center;
   padding-top: 150px;
   padding-bottom: 310px;
+}
+
+.pet-img {
+  object-fit: cover;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 /****SITTER PROFILE STYLE****/

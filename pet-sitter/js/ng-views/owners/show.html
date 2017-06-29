@@ -1,10 +1,11 @@
-<h1>Owner's Profile</h1>
+<h2>Owner's Profile</h2>
 <p>{{vm.owner.name}}</p>
 <p>{{vm.owner.phone}}</p>
 <p>{{vm.owner.email}}</p>
 
-<h1>Pet's Profile</h1>
+<h2>Pet's Profile</h2>
+<p><a data-ui-sref="petNew({id: vm.owner.id})">Add Pet</a></p>
 <div data-ng-repeat="pet in vm.owner.pets">
   <p>{{pet.name}}</p>
-  <p><a data-ui-sref="petNew({id: pet.owner_id})">Add Pet</a></p>
+  <p><a data-ui-sref="petEdit({owner_id: pet.owner_id, id: pet.id})">Edit</a></p>
 </div>

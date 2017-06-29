@@ -24,6 +24,10 @@
       <rzslider rz-slider-model="priceSlider" ng-model="vm.byPrice" ng-value="vm.price"></rzslider>
     </div>
 
+    <rzslider rz-slider-model="vm.slider.minValue"
+          rz-slider-high="vm.slider.maxValue"
+          rz-slider-options="vm.slider.options" ng-value="vm.price" ng-model="vm.byPrice"></rzslider>
+
     <input type="range" value="30" min="40" max="90" step="5" list="tickmarks" ng-model="vm.byPrice" ng-value="vm.price"/>
     <datalist id="tickmarks">
       <option value="0">

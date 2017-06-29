@@ -174,7 +174,7 @@ alberta = Sitter.create(name: "Alberta Meece",
       pet_type: ['dog', 'bird', 'cat'],
       service: ['drop-in', 'house sitting', 'boarding'],
       price: 60,
-      carousel_img: ["https://images.pexels.com/photos/271795/pexels-photo-271795.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/326989/pexels-photo-326989.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/271436/pexels-photo-271436.jpeg?h=350&auto=compress&cs=tinysrgb", "https://cdn.pixabay.com/photo/2016/01/19/17/55/parrots-1149970__480.jpg"])
+      carousel_img: ["https://images.pexels.com/photos/271795/pexels-photo-271795.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/326989/pexels-photo-326989.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/271436/pexels-photo-271436.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/298660/pexels-photo-298660.jpeg?h=350&auto=compress&cs=tinysrgb"])
 
   uriah = Sitter.create(name: "Uriah Yarmouth",
     photo_url: "https://images.pexels.com/photos/316680/pexels-photo-316680.jpeg?h=350&auto=compress&cs=tinysrgb",

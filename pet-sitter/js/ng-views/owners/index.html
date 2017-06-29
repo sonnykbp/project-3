@@ -38,14 +38,13 @@
     <div class="img-thumbnail hover description">
 
       <a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})"><img class="resize" data-ng-src="{{pet.photo_url}}"/></a>
+      <h3 style="text-align: center;"><a style="color: green; text-decoration: none;"data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></h3>
 
-      <ul>
-        <li><a data-ui-sref="PetSitterOwnerShow({id: pet.owner_id})">{{pet.name}}</a></li>
-        <li>{{pet.pet_type}}</li>
-        <li>{{pet.zipcode}}</li>
-        <li>{{pet.start_date}}</li>
-        <li>{{pet.end_date}}</li>
-      </ul>
+      <div style="text-align: center;">
+      <p><span>Pet Types:</span> {{pet.pet_type}} <span>Location:</span> {{pet.zipcode}} <br> <span>Medical Requirements:</span> {{pet.medical_needs}}</p>
+      <!-- <p><span>Location:</span> {{pet.zipcode}}</p>
+      <p><span>Medical Requirements:</span> {{pet.medical_needs}}</p> -->
+    </div>
 
     </div>
   </div>

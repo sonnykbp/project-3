@@ -219,3 +219,33 @@ span {
   height: 200px
 }
 /* End carousel */
+select {
+  color: green;
+  padding: 10px;
+  margin: 8px;
+  height: 30px;
+  border-radius: 4px;
+
+}
+.left_owner_group {
+  margin-right: 40px;
+}
+
+button {
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  background: green;
+  color: white;
+}
+
+button:hover {
+  background: white;
+  color: green;
+  border: 1px solid green;
+}
+
+.slider_line {
+  background: green;
+  margin: 20px;
+}

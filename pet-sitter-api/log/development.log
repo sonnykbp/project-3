@@ -1,0 +1,50 @@
+Started GET "/sitters" for 127.0.0.1 at 2017-07-25 00:25:03 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (1.8ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 40ms (Views: 21.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/sitters" for 127.0.0.1 at 2017-07-25 00:25:05 -0400
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (0.6ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sitters" for 127.0.0.1 at 2017-07-25 00:25:13 -0400
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (0.7ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sitters" for 127.0.0.1 at 2017-07-25 00:25:16 -0400
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (0.5ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/all_pets" for 127.0.0.1 at 2017-07-25 00:25:47 -0400
+Processing by PetsController#all_pets as HTML
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 26ms (Views: 16.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/sitters" for 127.0.0.1 at 2017-07-25 00:26:00 -0400
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (0.5ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/all_pets" for 127.0.0.1 at 2017-07-25 00:26:06 -0400
+Processing by PetsController#all_pets as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sitters" for 127.0.0.1 at 2017-07-28 13:28:09 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SittersController#index as HTML
+  [1m[36mSitter Load (2.0ms)[0m  [1m[34mSELECT "sitters".* FROM "sitters"[0m
+Completed 200 OK in 57ms (Views: 38.1ms | ActiveRecord: 8.9ms)
+
+

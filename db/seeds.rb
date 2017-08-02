@@ -141,7 +141,7 @@ alberta = Sitter.create(name: "Alberta Meece",
   carousel_img: ["https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/276715/pexels-photo-276715.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/311398/pexels-photo-311398.jpeg?h=350&auto=compress&cs=tinysrgb"])
 
   urbanus = Sitter.create(name: "Urbanus Ghio",
-    photo_url: "https://images.pexels.com/photos/48647/pexels-photo-48647.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url: "https://image.freepik.com/free-photo/close-up-of-smiling-man-with-folded-arms-in-the-field_1140-578.jpg",
     phone: "434-837-9161",
     email: "ughio5@free.fr",
     start_date: "2017-7-12 9:00",
@@ -153,7 +153,7 @@ alberta = Sitter.create(name: "Alberta Meece",
     carousel_img: ["https://images.pexels.com/photos/299629/pexels-photo-299629.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39388/chihuahua-dog-puppy-cute-39388.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/160233/pexels-photo-160233.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/292427/pexels-photo-292427.jpeg?h=350&auto=compress&cs=tinysrgb"])
 
   wynnie = Sitter.create(name: "Wynnie Milmo",
-    photo_url: "https://images.pexels.com/photos/57862/pexels-photo-57862.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url: "http://img.freepik.com/free-photo/smiling-woman-sitting-at-desk_1301-1816.jpg?size=338&ext=jpg",
     phone: "216-214-4529",
     email: "wmilmo6@msu.edu",
     start_date: "2017-8-19 9:00",
@@ -189,7 +189,7 @@ alberta = Sitter.create(name: "Alberta Meece",
     carousel_img: ["https://images.pexels.com/photos/29907/pexels-photo-29907.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/269218/pexels-photo-269218.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/47466/pexels-photo-47466.jpeg?h=350&auto=compress&cs=tinysrgb", "https://cdn.pixabay.com/photo/2016/07/20/21/57/turtle-1531367__480.jpg"])
 
   vonni = Sitter.create(name: "Vonni Payley",
-    photo_url: "https://images.pexels.com/photos/241734/pexels-photo-241734.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url: "http://img.freepik.com/free-photo/woman-pointing-her-smile_1149-313.jpg?size=338&ext=jpg",
     phone: "202-493-4963",
     email: "vpayley9@chronoengine.com",
     start_date: "2017-7-01 9:00",
@@ -201,7 +201,7 @@ alberta = Sitter.create(name: "Alberta Meece",
     carousel_img: ["https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/7784/cat-7784.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?h=350&auto=compress&cs=tinysrgb"])
 
   laird = Sitter.create(name: "Laird Frickey",
-    photo_url: "https://images.pexels.com/photos/101584/pexels-photo-101584.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url: "https://image.freepik.com/free-photo/smiling-man-sitting-with-a-newspaper-in-coffee-shop_1170-2060.jpg",
     phone: "154-727-9585",
     email: "lfrickeya@samsung.com",
     start_date: "2017-6-25 9:00",
@@ -237,7 +237,7 @@ alberta = Sitter.create(name: "Alberta Meece",
     carousel_img: ["https://images.pexels.com/photos/332974/pexels-photo-332974.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/210531/pexels-photo-210531.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/322059/pexels-photo-322059.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/273822/pexels-photo-273822.jpeg?h=350&auto=compress&cs=tinysrgb"])
 
   aymer = Sitter.create(name: "Aymer Highnam",
-  photo_url: "https://images.pexels.com/photos/175977/pexels-photo-175977.jpeg?h=350&auto=compress&cs=tinysrgb",
+  photo_url: "https://image.freepik.com/free-photo/smiling-woman_1218-307.jpg",
   phone: "790-536-4138",
   email: "ahighnamd@prweb.com",
   start_date: "2017-8-29 9:00",
@@ -438,7 +438,7 @@ socks = Pet.create(name: "Socks",
     owner: nial)
 
   fifi = Pet.create(name: "Fifi",
-    photo_url:"https://images.pexels.com/photos/117486/pexels-photo-117486.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url:"https://vetstreet.brightspotcdn.com/dims4/default/6ef3b58/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F93%2Fc9f130a7fb11e0a0d50050568d634f%2Ffile%2FRottweiler-1-645mk062811.jpg",
     pet_type: "dog",
     start_date: "2017-7-26 6:00",
     end_date: "2017-8-5 12:00",
@@ -494,7 +494,7 @@ socks = Pet.create(name: "Socks",
     owner: murry)
 
   pink = Pet.create(name: "Pink",
-    photo_url:"https://images.pexels.com/photos/110142/pexels-photo-110142.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url:"http://www.catbreedsjunction.com/images/scottish-fold-cat-photo-5.jpg",
     pet_type: "cat",
     start_date: "2017-7-1 6:00",
     end_date: "2017-7-13 11:00",
@@ -662,7 +662,7 @@ socks = Pet.create(name: "Socks",
     owner: brewer)
 
   tanner = Pet.create(name: "Tanner",
-    photo_url:"https://images.pexels.com/photos/197457/pexels-photo-197457.jpeg?h=350&auto=compress&cs=tinysrgb",
+    photo_url:"https://vetstreet.brightspotcdn.com/dims4/default/62d6e5c/2147483647/crop/696x410%2B0%2B46/resize/645x379/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fef%2F11%2F01d0aee84a24b3e5827afb303f17%2Fscottish-fold-ap-00ir7s.jpg",
     pet_type: "cat",
     start_date: "2017-7-23 11:00",
     end_date: "2017-7-6 12:30",
